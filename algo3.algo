@@ -1,0 +1,46 @@
+PROCEDURE  vecteur(tab1,tab2)
+var
+i,j,produit:integer
+
+BEGIN
+FOR I FROM 0 TO 2 DO {
+FOR J FROM 0 TO 2 DO {
+    PRODUIT:=tab1[i]*tab2[j];}
+}
+end_for 
+end_for
+end
+ALGORITHM produit scalaire
+VAR
+    tab1:array of integer[3]
+    tab2:array of integer[3]
+BEGIN
+   tab1={1,5,6}
+   tab2={5,8,9}
+   vecteur(tab1,tab2)
+END
+
+
+deuxieme methode avec fonction
+function  vecteur(tab1,tab2:array of integer):integer
+var
+i,j,produit:integer
+
+BEGIN
+FOR I FROM 0 TO 2 DO {
+FOR J FROM 0 TO 2 DO {
+   return PRODUIT:=tab1[i]*tab2[j];}
+}
+end_for 
+end_for
+end
+ALGORITHM produit scalaire
+VAR
+    tab1:array of integer[3]
+    tab2:array of integer[3]
+BEGIN
+   tab1={1,5,6}
+   tab2={5,8,9}
+   vecteur(tab1,tab2)
+END
+
